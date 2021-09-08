@@ -6,7 +6,7 @@ const mongodb = require("mongodb");
 const mongoclient = mongodb.MongoClient;
 const PORT=process.env.PORT ||3000
 //urlstructuring dbprotocal://localhost(i.e)ipaddress:portnumber/dbname
-const url = "mongodb://localhost:27017";
+const url = "mongodb+srv://ammu:ammu@cluster0.urd2x.mongodb.net?retryWrites=true&w=majority";
 app.use(express.json());
 
 app.get("/products", async (req, res) => {
