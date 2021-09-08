@@ -4,6 +4,7 @@ const cors = require("cors");
 app.use(cors({ origin: "*" }));
 const mongodb = require("mongodb");
 const mongoclient = mongodb.MongoClient;
+const PORT=process.env.PORT ||3000
 //urlstructuring dbprotocal://localhost(i.e)ipaddress:portnumber/dbname
 const url = "mongodb://localhost:27017";
 app.use(express.json());
@@ -82,6 +83,6 @@ res.json({
     })
   }
 });
-app.listen(3000, () => {
-  console.log("the port is listening in 3000");
+app.listen(PORT, () => {
+  console.log(`the port is listening in ${PORT}`);
 });
